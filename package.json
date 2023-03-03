@@ -11,6 +11,8 @@
     "@heroicons/vue": "^1.0.6",
     "@vue-hero-icons/solid": "^1.7.2",
     "mitt": "^3.0.0",
+    "three": "^0.134.0",
+    "troisjs": "^0.3.4",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },

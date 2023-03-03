@@ -121,149 +121,9 @@ export default {
             })
         });
       },
-      
-      async getLogicielDesignSynchro(){
-                // Obtenir Firestore
-                const firestore = getFirestore();
-                // Base de données (collection)  document pays
-                const dbLogicielDesign= collection(firestore, "LogicielDesign");
-                // Liste des pays synchronisée
-                const query = await onSnapshot(dbLogicielDesign, (snapshot) =>{
-                    //  Récupération des résultats dans listePaysSynchro
-                    // On utilse map pour récupérer l'intégralité des données renvoyées
-                    // on identifie clairement le id du document
-                    // les rest parameters permet de préciser la récupération de toute la partie data
-                    this.listeLogicielDesignSynchro = snapshot.docs.map(doc => ({id:doc.id, ...doc.data()}));
-                    this.listeLogicielDesignSynchro.forEach(function(LogicielDesign){
-                      const storage = getStorage();
-                      const spaceRef = ref(storage, 'ApercuLogicielDesign/'+LogicielDesign.photo);
-                      getDownloadURL(spaceRef)
-                      .then((url) => {
-                        LogicielDesign.photo = url;
-                      })
-                      .catch((error) =>{
-                        console.log('erreur downloadUrl', error)
-                      })
-                    }) 
-                })
-            },
-            async createLogicielDesign(){
-                // Obtenir Firestore
-                const firestore = getFirestore();
-                // Base de données (collection)  document pays
-                const dbLogicielDesign= collection(firestore, "LogicielDesign");
-                // On passe en paramètre format json
-                // Les champs à mettre à jour
-                // Sauf le id qui est créé automatiquement
-                const docRef = await addDoc(dbLogicielDesign,{
-                    nom: this.nom,
-                    description: this.description,
-                    photo: this.photo
-                })
-                console.log('document créé avec le id : ', docRef.id);
-             },
-            async updateLogicielDesign(LogicielDesign){
-                // Obtenir Firestore
-                const firestore = getFirestore();
-                // Base de données (collection)  document pays
-                // Reference du pays à modifier
-                const docRef = doc(firestore, "LogicielDesign", LogicielDesign.id);
-                // On passe en paramètre format json
-                // Les champs à mettre à jour
-                await updateDoc(docRef, {
-                    nom: LogicielDesign.nom
-                }) 
-             },
-            async deleteLogicielDesign(LogicielDesign){
-                // Obtenir Firestore
-                const firestore = getFirestore();
-                // Base de données (collection)  document pays
-                // Reference du pays à supprimer
-                const docRef = doc(firestore, "LogicielDesign", LogicielDesign.id);
-                // Suppression du pays référencé
-                await deleteDoc(docRef);
-             },
-async createLogicielDesign(){
-            const storage = getStorage();
-            const refStorage = ref(storage, 'LogicielDesign/'+this.LogicielDesign.photo);
-            await uploadString(refStorage, this.imageData, 'data_url').then((snapshot) => {
-                console.log('Uploaded a base64 string');
-                const db = getFirestore();
-                const docRef = addDoc(collection(db, 'LogicielDesign'), this.LogicielDesign);
-            });
-            this.$router.push('/')
-        },
-        async getLogicielDevSynchro(){
-                // Obtenir Firestore
-                const firestore = getFirestore();
-                // Base de données (collection)  document pays
-                const dbLogicielDev= collection(firestore, "LogicielDev");
-                // Liste des pays synchronisée
-                const query = await onSnapshot(dbLogicielDev, (snapshot) =>{
-                    //  Récupération des résultats dans listePaysSynchro
-                    // On utilse map pour récupérer l'intégralité des données renvoyées
-                    // on identifie clairement le id du document
-                    // les rest parameters permet de préciser la récupération de toute la partie data
-                    this.listeLogicielDevSynchro = snapshot.docs.map(doc => ({id:doc.id, ...doc.data()}));
-                    this.listeLogicielDevSynchro.forEach(function(LogicielDev){
-                      const storage = getStorage();
-                      const spaceRef = ref(storage, 'ApercuLogicielDev/'+LogicielDev.photo);
-                      getDownloadURL(spaceRef)
-                      .then((url) => {
-                        LogicielDev.photo = url;
-                      })
-                      .catch((error) =>{
-                        console.log('erreur downloadUrl', error)
-                      })
-                    }) 
-                })
-            },
-            async createLogicielDev(){
-                // Obtenir Firestore
-                const firestore = getFirestore();
-                // Base de données (collection)  document pays
-                const dbLogicielDev= collection(firestore, "LogicielDev");
-                // On passe en paramètre format json
-                // Les champs à mettre à jour
-                // Sauf le id qui est créé automatiquement
-                const docRef = await addDoc(dbLogicielDev,{
-                    nom: this.nom,
-                    description: this.description,
-                    photo: this.photo
-                })
-                console.log('document créé avec le id : ', docRef.id);
-             },
-            async updateLogicielDev(LogicielDev){
-                // Obtenir Firestore
-                const firestore = getFirestore();
-                // Base de données (collection)  document pays
-                // Reference du pays à modifier
-                const docRef = doc(firestore, "LogicielDev", LogicielDev.id);
-                // On passe en paramètre format json
-                // Les champs à mettre à jour
-                await updateDoc(docRef, {
-                    nom: LogicielDev.nom
-                }) 
-             },
-            async deleteLogicielDev(LogicielDev){
-                // Obtenir Firestore
-                const firestore = getFirestore();
-                // Base de données (collection)  document pays
-                // Reference du pays à supprimer
-                const docRef = doc(firestore, "LogicielDev", LogicielDev.id);
-                // Suppression du pays référencé
-                await deleteDoc(docRef);
-             },
-async createLogicielDev(){
-            const storage = getStorage();
-          const refStorage = ref(storage, 'ApercuLogicielDev/'+this.LogicielDev.photo);
-            await uploadString(refStorage, this.imageData, 'data_url').then((snapshot) => {
-                console.log('Uploaded a base64 string');
-                const db = getFirestore();
-                const docRef = addDoc(collection(db, 'LogicielDev'), this.LogicielDev);
-            });
-            this.$router.push('/')
-        },
+    
+
+ 
         
     } 
 }
@@ -271,7 +131,7 @@ async createLogicielDev(){
 
 <template>
     <div>
-      <div class="bg-[url('/public/Fond.png')]">
+      <div class="bg-[url('/public/images/Fond.png')]">
         <Header />
         <div class="pt-5 px-5 grid grid-cols-1 lg:grid-cols-2 gap-20 relative ">
             <div>
@@ -318,29 +178,7 @@ async createLogicielDev(){
 <img src="/public/Nasa.png" alt="">
 </div>
 </div>
-<div class="p-2 border-1 border-solid border-red-500 w-full bg-red-500">
-      </div>
-        <div class=" pt-5 px-5 grid grid-cols-1 lg:grid-cols-2 gap-20 relative ">
-            <div>
-      <h1 class="bg-white text-black text-center font-bold text-3xl">       
-    MY PROJECTS</h1>
-      <br />
-        <p class=" text-black text-center pb-4 text-2xl font-bold font-kaushan">Come and discover my various projects that I had the opportunity to carry out during my first two years of BUT MMI. </p>
     </div>
-<div class="bg-black grid grid-cols-1 md:grid-cols-2">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-</div>
-</div>
-  <div class="p-2 border-1 border-solid border-red-500 w-full bg-red-500">
-      </div>
-
-</div>
 </template>
 
 <style>
