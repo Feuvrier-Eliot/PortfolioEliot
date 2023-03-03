@@ -51,8 +51,7 @@ export default {
     // Au lancement de l'application
     this.getUserConnect();
 
-    this.getLogicielDesignSynchro();
-    this.getLogicielDevSynchro();
+
 
     // Ecoute de l'évènement de connexion
     emitter.on('connectUser', e => {
@@ -153,7 +152,7 @@ export default {
   </div>
   <div class="p-2">
       </div>
-      <div class="container bg-[url('/public/Planete.jfif')]">
+      <div class="container bg-red-500">
       <span class="txt t1 text-white">- WEBDESIGNER - 3D ARTIST - WEBDESIGNER - DEVELOPPEUR</span>
       <span class="txt t2 text-white">- WEBDESIGNER - 3D ARTIST - WEBDESIGNER - DEVELOPPEUR</span>
     </div>
@@ -165,17 +164,16 @@ export default {
     MY PROJECTS</h1>
       <br />
         <p class=" text-black text-center pb-4 text-2xl font-bold font-kaushan">Come and discover my various projects that I had the opportunity to carry out during my first two years of BUT MMI. </p>
-        <img src="/public/vaisseau.png" id="vaisseau" alt="">
 
       </div>
 <div class="bg-black grid grid-cols-1 md:grid-cols-2">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
-<img src="/public/Nasa.png" alt="">
+<img src="/public/images/Nasa.png" alt="">
+<img src="/public/images/Nasa.png" alt="">
+<img src="/public/images/Nasa.png" alt="">
+<img src="/public/images/Nasa.png" alt="">
+<img src="/public/images/Nasa.png" alt="">
+<img src="/public/images/Nasa.png" alt="">
+<img src="/public/images/Nasa.png" alt="">
 </div>
 </div>
     </div>
