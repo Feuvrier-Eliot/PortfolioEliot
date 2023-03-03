@@ -48,7 +48,7 @@
   </template>
   
 <script>
-import Header from '../components/Header.vue'
+import Header from '../components/header.vue'
 import {emitter} from '../main.js'
 import { 
   getFirestore,   // Obtenir le Firestore
