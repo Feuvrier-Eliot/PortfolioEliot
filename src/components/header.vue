@@ -37,6 +37,9 @@
             <li class="my-5">
               <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-white" to="/contact">Contact</RouterLink>
             </li>
+            <li class="my-5">
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-white " to="/admin">Connexion</RouterLink>
+        </li>
           </ul>
           </Transition>
           <ul class="lg:flex  gap-4 lg:items-center text-white text-xl font-algerian mx-6 py-4 hidden" >
@@ -55,6 +58,9 @@
             <li class="my-5">
               <RouterLink v-if="isAdmin" class="border-2 border-white my-6 lg:px-2 xl:pt-2 rounded-2xl font-museomoderno text-white" to="/profil">Mon Profil</RouterLink>
             </li>
+            <li class="my-5">
+          <RouterLink class="my-6 lg:px-4 xl:pt-2 xl:rounded-sm font-museomoderno text-white " to="/admin">Connexion</RouterLink>
+        </li>
           </ul>    
         </nav>
       </header>
