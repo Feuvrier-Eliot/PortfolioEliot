@@ -20,7 +20,7 @@ import { getAuth } from 'https://www.gstatic.com/firebasejs/9.17.0/firebase-auth
 // Import emetteur de main.js
 import { emitter } from '../main'
 import Planet from "../components/planet.vue"
-import Header from "../components/header.vue"
+import Header from "../components/Header.vue"
 
 
 
