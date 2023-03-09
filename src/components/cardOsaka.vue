@@ -1,8 +1,8 @@
 <template>
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
-       <div class="w-80 h-80 border border-white group hover:bg-white" alt="Logo festival">
+       <div class="w-80 h-80 border border-white group hover:bg-white" alt="Logo osaka">
        <div class="px-6 py-4">
-           <p class="font-bold text-xl mb-2 text-white text-center group-hover:text-black">Festival</p>
+           <p class="font-bold text-xl mb-2 text-white text-center group-hover:text-black">Osaka</p>
          </div>
          </div>
         </div>
