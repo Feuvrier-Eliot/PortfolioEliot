@@ -3,12 +3,12 @@
 import Planet from "../components/Planet.vue"
 import Header from "../components/header.vue"
 import Footer from '../components/footer.vue'
-import cardFestival from '../components/cardFestival.vue'
-import cardNasa from '../components/cardNasa.vue'
-import cardDahut from '../components/cardDahut.vue'
-import cardTiktak from '../components/cardTiktak.vue'
-import cardOsaka from '../components/cardOsaka.vue'
-import cardLogoB from '../components/cardLogoB.vue'
+import cardFestival from '../components/card/cardFestival.vue'
+import cardNasa from '../components/card/cardNasa.vue'
+import cardDahut from '../components/card/cardDahut.vue'
+import cardTiktak from '../components/card/cardTiktak.vue'
+import cardOsaka from '../components/card/cardOsaka.vue'
+import cardLogoB from '../components/card/cardLogoB.vue'
 export default {
     name:"App",
     components: { Planet, Header, Footer, cardFestival, cardNasa, cardDahut, cardTiktak,cardOsaka, cardLogoB },
@@ -82,7 +82,7 @@ export default {
           <p class="text-center text-white md:text-xl text-lg font-book ">I, I’m Eliot Feuvrier, i’m a french designer based in Montbéliard. I love discovering a lot of things and experimenting around graphic design, I am currently in the second year of BUT MMI </p>
          </div>
          <div>
-          <img src="/public/Eliot.png" class="md:w-60 w-32">         
+          <img src="/public/images/Eliot.png" class="md:w-60 w-32">         
         </div>
         </div> 
      </section>
