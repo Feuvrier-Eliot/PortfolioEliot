@@ -103,7 +103,7 @@ export default {
     </div>
   </div>
 </div>
-
+<Footer />
 </template>
 
 <style>
