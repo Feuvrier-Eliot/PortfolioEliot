@@ -1,22 +1,109 @@
 <script>
-import Header from '../components/header.vue';
+
+import Planet from "../components/Planet.vue"
+import Header from "../components/header.vue"
+import Footer from '../components/footer.vue'
+import cardFestival from '../components/cardFestival.vue'
+import cardNasa from '../components/cardNasa.vue'
+import cardDahut from '../components/cardDahut.vue'
+import cardTiktak from '../components/cardTiktak.vue'
+import cardOsaka from '../components/cardOsaka.vue'
+import cardLogoB from '../components/cardLogoB.vue'
 export default {
     name:"App",
-    components: { Header },
+    components: { Planet, Header, Footer, cardFestival, cardNasa, cardDahut, cardTiktak,cardOsaka, cardLogoB },
+  data() {
+    return {
+
+      menuOuvert: false,
+
+        
+    } 
+},
 }
 </script>
 
 <template>
-     <div class="bg-[#15112B]">
-    <div id="stars"></div>
+<div class="bg-[#15112B]">
+
+   <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
         <div id="title">
             <Header />
         <div class="pt-5 px-5 gap-20 relative">
-          </div>
-          </div>
-          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div>
+      <h1 class="text-white text-center font-medium text-3xl">       
+     FRENCH DESIGNER</h1>
+     <h1 class="text-white text-center font-medium text-3xl"> AUDIO-VISUAL DIGITAL</h1>
+     <h1 class="text-white text-center font-medium text-3xl"> PRODUCTS LOGOS </h1>
+    <div class="p-1 border-solid border-white w-full bg-white">
+      </div>
+      <br />
+        <h3 class=" text-white text-center pb-4 text-2xl font-bold font-medium">WELCOME TO MY UNIVERSE</h3>
+    <p class="pb-4 text-lg font-light text-white text-center font-medium">MOTION DESIGN</p>
+    <p class="pb-4 text-lg font-light text-white text-center font-medium">3D Artist</p>
+    </div>
+<div class="h-80 ">
+<Planet />
+</div>
+</div>
+
+
+  <div class="p-2">
+      </div>
+
+    <div class="p-2">
+      </div>
+        <div class=" pt-5 px-5 gap-20 relative ">
+            <div>
+      <h1 class="text-white text-center font-medium text-3xl">       
+    MY PROJECTS</h1>
+      <br />
+      </div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<cardFestival />
+<cardNasa />
+<cardDahut />
+<cardTiktak />
+<cardOsaka />
+<cardLogoB />
+
+</div>
+<button class="bg-white rounded-2xl font-book justify-center">Discover more</button>
+</div>
+
+      <section class="md:h-fit h-fit">
+          <h1 class=" text-white md:text-6xl text-xl font-medium ">About Me</h1>
+        <br>
+         <div class="grid grid-cols-2 gap-6">
+          <div>
+          <p class="text-center text-white md:text-xl text-lg font-book ">I, I’m Eliot Feuvrier, i’m a french designer based in Montbéliard. I love discovering a lot of things and experimenting around graphic design, I am currently in the second year of BUT MMI </p>
+         </div>
+         <div>
+          <img src="/public/Eliot.png" class="md:w-60 w-32">         
+        </div>
+        </div> 
+     </section>
+      <section class="md:h-screen h-fit">
+        <div class="grid grid-cols-2">
+          <h1 class=" text-white md:text-6xl text-xl font-medium">Contact</h1>
+          <img src="/public/logoEliotBlanc.svg" alt="" class="float-right">
+        </div>
+         <div class="grid grid-cols-2 gap-6">
+          <div>
+          <p class="text-justify text-white md:text-xl text-lg font-book">I, I’m Eliot Feuvrier, i’m a french designer based in Montbéliard. I love discovering a lot of things and experimenting around graphic design, I am currently in the second year of BUT MMI </p>
+         </div>
+         <div class="col-span-2 md:text-9xl text-6xl text-white font-medium">
+          LET’S WORK TOGETHER
+        </div>
+        </div> 
+     </section>
+    </div>
+  </div>
+</div>
+
 </template>
 
 <style>
