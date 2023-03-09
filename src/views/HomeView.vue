@@ -34,16 +34,16 @@ export default {
         <div class="pt-5 px-5 gap-20 relative">
           <div class="grid grid-cols-1 lg:grid-cols-2">
             <div>
-      <h1 class="text-white text-center font-medium text-3xl">       
+      <h1 class="text-white text-center  text-3xl">       
      FRENCH DESIGNER</h1>
-     <h1 class="text-white text-center font-medium text-3xl"> AUDIO-VISUAL DIGITAL</h1>
-     <h1 class="text-white text-center font-medium text-3xl"> PRODUCTS LOGOS </h1>
+     <h1 class="text-white text-center  text-3xl"> AUDIO-VISUAL DIGITAL</h1>
+     <h1 class="text-white text-center  text-3xl"> PRODUCTS LOGOS </h1>
     <div class="p-1 border-solid border-white w-full bg-white">
       </div>
       <br />
-        <h3 class=" text-white text-center pb-4 text-2xl font-bold font-medium">WELCOME TO MY UNIVERSE</h3>
-    <p class="pb-4 text-lg font-light text-white text-center font-medium">MOTION DESIGN</p>
-    <p class="pb-4 text-lg font-light text-white text-center font-medium">3D Artist</p>
+        <h3 class=" text-white text-center pb-4 text-2xl font-bold ">WELCOME TO MY UNIVERSE</h3>
+    <p class="pb-4 text-lg  text-white text-center ">MOTION DESIGN</p>
+    <p class="pb-4 text-lg  text-white text-center ">3D Artist</p>
     </div>
 <div class="h-80 ">
 <Planet />
@@ -58,7 +58,7 @@ export default {
       </div>
         <div class=" pt-5 px-5 gap-20 relative ">
             <div>
-      <h1 class="text-white text-center font-medium text-3xl">       
+      <h1 class="text-white text-center  text-3xl">       
     MY PROJECTS</h1>
       <br />
       </div>
@@ -75,7 +75,7 @@ export default {
 </div>
 
       <section class="md:h-fit h-fit">
-          <h1 class=" text-white md:text-6xl text-xl font-medium ">About Me</h1>
+          <h1 class=" text-white md:text-6xl text-xl  ">About Me</h1>
         <br>
          <div class="grid grid-cols-2 gap-6">
           <div>
@@ -88,14 +88,14 @@ export default {
      </section>
       <section class="md:h-screen h-fit">
         <div class="grid grid-cols-2">
-          <h1 class=" text-white md:text-6xl text-xl font-medium">Contact</h1>
+          <h1 class=" text-white md:text-6xl text-xl ">Contact</h1>
           <img src="/public/logoEliotBlanc.svg" alt="" class="float-right">
         </div>
          <div class="grid grid-cols-2 gap-6">
           <div>
           <p class="text-justify text-white md:text-xl text-lg font-book">I, I’m Eliot Feuvrier, i’m a french designer based in Montbéliard. I love discovering a lot of things and experimenting around graphic design, I am currently in the second year of BUT MMI </p>
          </div>
-         <div class="col-span-2 md:text-9xl text-6xl text-white font-medium">
+         <div class="col-span-2 md:text-9xl text-6xl text-white ">
           LET’S WORK TOGETHER
         </div>
         </div> 
