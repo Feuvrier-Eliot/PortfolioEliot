@@ -37,16 +37,16 @@ export default {
       <br />
       </div>
 <div>
-    <img src="public/images/Festival/logofestival.png" alt="" class="w-56">
+    <img src="/public/images/Festival/logofestival.png" alt="" class="w-56">
 </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 pt-5 px-5 gap-20 relative ">
             <div>
-    <img src="public/images/Festival/logofestival.png" alt="" class="w-56">
+    <img src="/public/images/Festival/logofestival.png" alt="" class="w-56">
       </div>
 <div>
-    <img src="public/images/Festival/logofestival.png" alt="" class="w-56">
+    <img src="/public/images/Festival/logofestival.png" alt="" class="w-56">
 </div>
       </div>
 <div>
@@ -60,9 +60,9 @@ export default {
       <h1 class="text-white text-center  text-3xl">       
     Used tools</h1>
     <div class="flex gap-3 place-content-center pt-10">
-<img src="public/images/tools/Illustrator.svg" alt="">
-<img src="public/images/tools/Figma.svg" alt="">
-<img src="public/images/tools/VueJS.svg" alt="">
+<img src="/public/images/tools/Illustrator.svg" alt="">
+<img src="/public/images/tools/Figma.svg" alt="">
+<img src="/public/images/tools/VueJS.svg" alt="">
 </div>
     <br />
       </div>
