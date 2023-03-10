@@ -92,9 +92,6 @@ export default {
           <img src="/public/logoEliotBlanc.svg" alt="" class="float-right">
         </div>
          <div class="grid grid-cols-2 gap-6">
-          <div>
-          <p class="text-justify text-white md:text-xl text-lg font-book">I, I’m Eliot Feuvrier, i’m a french designer based in Montbéliard. I love discovering a lot of things and experimenting around graphic design, I am currently in the second year of BUT MMI </p>
-         </div>
          <div class="col-span-2 md:text-9xl text-6xl text-white ">
           LET’S WORK TOGETHER
         </div>
