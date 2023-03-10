@@ -1,4 +1,5 @@
 <template>
+  <RouterLink to="/festival">
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
        <div class="w-80 h-80 border border-white group hover:bg-white" alt="Logo festival">
        <div class="px-6 py-4">
@@ -6,14 +7,16 @@
          </div>
          </div>
         </div>
+      </RouterLink>
      </template>
      
      <script>
+import { RouterLink } from 'vue-router';
+
      export default {
-       name: 'card',
-       props: {
-   
-       },
-     };
+    name: "card",
+    props: {},
+    components: { RouterLink }
+};
      </script>
      
