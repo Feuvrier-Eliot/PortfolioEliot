@@ -1,6 +1,6 @@
 <script>
 
-import Planet from "../components/Planet.vue"
+import Planet from "../components/planet.vue"
 import Header from "../components/header.vue"
 import Footer from '../components/footer.vue'
 import cardFestival from '../components/card/cardFestival.vue'
