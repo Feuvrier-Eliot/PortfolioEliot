@@ -25,7 +25,7 @@ export default {
         '/assets/Festival-0c7c4312.png',
         '/assets/Nasa_couleurs-6c971a85.png',
         '/assets/Dahut-d2019abd.png',
-        '/assets/tiktakLogo.png',
+        '/assets/tiktak.png',
         '/assets/Osaka-34219aee.png',
         '/assets/Cassandre_affiche-f5bfe07e.png'
       ],
