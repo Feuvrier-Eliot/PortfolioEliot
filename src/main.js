@@ -4,6 +4,7 @@ import router from './router'
 
 import './index.css'
 import mitt from 'mitt';
+import 'animate.css';
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.0/firebase-app.js";  // Initialize Firebase
 
@@ -15,12 +16,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.0/firebas
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBHIogkwaUxonlx7ZiIJ5jYb1qblL6UTDk",
-    authDomain: "portfolioeliot-2321b.firebaseapp.com",
-    projectId: "portfolioeliot-2321b",
-    storageBucket: "portfolioeliot-2321b.appspot.com",
-    messagingSenderId: "19044177510",
-    appId: "1:19044177510:web:c33caf721c4978c52f3fa7"
+    apiKey: "AIzaSyCvZd4eng-J8dajNe0fNAjROk4f0Uf-LS8",
+    authDomain: "portfolioeliot.firebaseapp.com",
+    projectId: "portfolioeliot",
+    storageBucket: "portfolioeliot.appspot.com",
+    messagingSenderId: "1050356799126",
+    appId: "1:1050356799126:web:f6a126a869f9ef2c69d4b7"
   };
   
   // Initialize Firebase

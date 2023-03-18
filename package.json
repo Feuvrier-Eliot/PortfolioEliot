@@ -1,5 +1,5 @@
 {
-  "name": "portfolioeliot",
+  "name": "portfolio-fabio",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,19 +8,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@heroicons/vue": "^1.0.6",
-    "@vue-hero-icons/solid": "^1.7.2",
+    "animate.css": "^4.1.1",
+    "firebase": "^9.17.1",
     "mitt": "^3.0.0",
     "three": "^0.134.0",
     "troisjs": "^0.3.4",
-    "vue": "^3.2.47",
+    "vue": "^3.2.45",
+    "vue-awesome-swiper": "^5.0.1",
+    "vue-carousel": "^0.18.0",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
-    "vite": "^4.1.4"
+    "tailwindcss": "^3.2.6",
+    "vite": "^4.0.0"
   }
 }

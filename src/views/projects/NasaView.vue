@@ -1,0 +1,78 @@
+<template>
+  <div class="bg-[#15112B]">
+  
+  <div id="stars"></div>
+       <div id="stars2"></div>
+       <div id="stars3"></div>
+       <div id="title">
+           <Header />
+           <div class="pt-5 md:px-5 gap-5 md:gap-20 relative">
+            <div class="grid grid-cols-1">
+              <div class="md:pt-40 pt-20 animate__animated animate__backInDown">
+                <div>
+        <h1 class="text-white pl-8 md:pl-20 text-left font-rubik text-3xl md:text-7xl">NASA </h1>
+  
+  </div>
+  
+  <div class="md:pt-10 pt-5">
+      <p class="md:pb-4 md:text-lg font-light pl-8 md:pl-20 text-white text-left font-rubik uppercase">Project realized in March 12, 2022</p>
+    </div>
+    </div>
+  <div class=" md:h-96 h-40">
+  </div>
+  </div>
+  </div>
+  </div>
+    </div>
+    <div class="pt-2 md:pt-5 px-10 md:px-20 gap-10 md:gap-20 relative ">
+    <h1 class="pt-8 md:pt-20 text-black text-left md:text-6xl text-xl font-rubik uppercase">       
+      About</h1>
+      <div class="md:pt-5 w-40 md:w-96">
+      <hr class="black">
+      </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 pt-12 md:pt-24 pl-16 md:pl-80">
+      <div>
+        <div class="pb-10 md:pb-20">
+      <img class="w-48 md:w-80 " src="/public/Nasa.png">
+      <p class="text-black pl-16 md:pl-24 pt-1 text-base font-rubik">Logo black and white version</p>
+      </div>
+      <div class="pb-10 md:pb-20">
+  
+      <img class="w-48 md:w-80" src="/public/Nasa_couleurs.png">
+      <p class="text-black pl-28 md:pl-64 pt-1 text-base font-rubik">Logo</p>
+  </div>
+      </div>
+      <div class="md:pr-20">
+      <p class="text-[#342A6A] text-2xl font-bold md:text-4xl pb-2 md:pb-5">PROJECT INFO</p>
+      <p class="text-black text-base font-rubik pb-2 md:pb-5">The NASA logo is a fictional project done at the MMI department. The work to be done behind this project was to choose a logo and readjust it. I chose the NASA logo and I reworked it in order to adapt it a little more to the different tastes of our current society and to make it more refined</p>
+      <p class="text-[#342A6A] text-2xl font-bold md:text-4xl pb-2 md:pb-5">CLIENT</p>
+      <p class="text-black text-base font-rubik pb-2 md:pb-5">The MMI department in the context of an examination.</p>
+      <p class="text-[#342A6A] text-2xl font-bold md:text-4xl pb-2 md:pb-5">USED TOOLS </p>
+      <p class="text-black text-base font-rubik pb-2 md:pb-5">Illustrator</p>
+      <p class="text-[#342A6A] text-2xl font-bold md:text-4xl pb-2 md:pb-5">URL </p>
+      <a href="#" class="text-black text-base font-rubik ">...</a>
+  </div>
+    </div>
+      </div>
+  
+      <section class="h-fit md:h-fit pt-10">
+          <img src="/public/NasaCharte.png" alt="">
+      </section>  
+       <Footer />
+  
+  </template>
+  <script>
+  // Import Swiper Vue.js components
+  import Footer from '../../components/footer.vue';
+  import Header from '../../components/header.vue';
+  
+  // import required modules
+  
+  export default {
+    components: {
+      Header,
+      Footer
+  },
+   
+  }
+  </script>

@@ -1,109 +1,274 @@
 <script>
-
-import Planet from "../components/planet.vue"
 import Header from "../components/header.vue"
 import Footer from '../components/footer.vue'
-import cardFestival from '../components/card/cardFestival.vue'
-import cardNasa from '../components/card/cardNasa.vue'
-import cardDahut from '../components/card/cardDahut.vue'
-import cardTiktak from '../components/card/cardTiktak.vue'
-import cardOsaka from '../components/card/cardOsaka.vue'
-import cardLogoB from '../components/card/cardLogoB.vue'
+
 export default {
     name:"App",
-    components: { Planet, Header, Footer, cardFestival, cardNasa, cardDahut, cardTiktak,cardOsaka, cardLogoB },
-  data() {
+    components: {  Header, Footer },
+    data() {
     return {
-
-      menuOuvert: false,
-
-        
-    } 
-},
+      animateText: false,
+      hovered: false,
+      selectedButtonIndex: null,
+      buttons: [
+        { text: 'Electro Moods Festival' },
+        { text: 'NASA' },
+        { text: 'Le Dahut Des Vignes' },
+        { text: 'Tik Tak' },
+        { text: 'Osaka' },
+        { text: 'Cassandre' },
+      ],
+      from_name: "",
+      email_id: "",
+      message: "",
+      images: [
+        '/public/festival.png',
+        '/assets/Nasa_couleurs-6c971a85.png',
+        '/assets/Dahut-d2019abd.png',
+        '/public/TikTak.png',
+        '/assets/Osaka-34219aee.png',
+        '/assets/Cassandre_affiche-f5bfe07e.png'
+      ],
+      texts: [
+        'The "Electro Moods Festival" is a fictional college project designed to practice event skills. With its bold art direction featuring a black background contrasting with blue and white neon lights, it showcases the unique and innovative musical style that makes for an electrifying and memorable festival.',
+        'The NASA logo is a fictional project done at the MMI department. The work to be done behind this project was to choose a logo and readjust it. I chose the NASA logo and I reworked it in order to adapt it a little more to the different tastes of our current society and to make it more refined.',
+        'Le Dahut des Vignes is a project that aimed to create a visual identity for a restaurant. In this group work, we chose to create a local restaurant in Burgundy. We had to create the Logo as well as set up a presence on social networks.',
+        'The Tiktak project is a project done as part of an exam at the MMI department. This consisted in creating from scratch a brand of connected watches as well as its website. So we designed the website, created the logo and then we developed it.',
+        'The Osaka Project is a fictional project that was set up to promote the 2025 World Expo in Osaka. The work to be done was to create a poster and a postcard that would be used during the inauguration of the universal exhibition.',
+        'The Cassandre project is a project that consisted of creating a postcard in the style of Cassandre, These postcards were made in a very simple and minimalist style with the aim of being warm and easily recognizable for the user.'
+        ],
+      dates: [
+        'March 12, 2022',
+        'December 13, 2022',
+        'December 2022',
+        'October 10, 2022',
+        'December, 2022',
+        'November 28, 2022',
+        ],
+      currentIndex: 0,
+      pages: [
+        '/festival',
+        '/nasa',
+        '/dahut',
+        '/tiktak',
+        '/osaka',
+        '/cassandre'
+      ]
+    };
+  },
+  methods: {
+    changeImageAndText(pairIndex) {
+      this.currentIndex = pairIndex;
+    },
+    goToPage() {
+      this.$router.push(this.pages[this.currentIndex]);
+    },
+    sendMail() {
+      const params = {
+        from_name: this.from_name,
+        email_id: this.email_id,
+        message: this.message,
+      };
+      emailjs
+        .send("service_430dq2r", "template_15d9h0l", params)
+        .then(res => {
+          alert(`Success! ${res.status}`);
+        })
+        .catch(err => {
+          alert(`Error: ${err}`);
+        });
+    },
+  }
 }
 </script>
 
 <template>
-<div class="bg-[#15112B]">
+<div class="bg-[#15112B] font-rubik">
 
    <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
         <div id="title">
             <Header />
-        <div class="pt-5 px-5 gap-20 relative">
-          <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="pt-5 md:px-5 gap-10 md:gap-20 relative">
+          <div class="grid grid-cols-1">
+            <div class="md:pt-40 pt-20 animate__animated animate__backInDown">
+              <div>
+      <h1 class="text-white text-center font-rubik text-3xl md:text-7xl">WELCOME TO MY UNIVERSE</h1>
+</div>
+<div class="md:pt-10 pt-2 px-40 md:px-96">
+<hr>
+</div>
+<div class="md:pt-10 pt-5">
+    <p class="pb-4  md:text-lg font-light text-white text-center font-rubik uppercase">ELIOT FEUVRIER</p>
+  </div>
+  </div>
+<div class="flex justify-center md:h-96 h-40 animate__animated animate__backInUp">
+<img src="/public/planete.png" alt="" class="md:h-[600px] h-[220px] ">
+</div>
+</div>
+</div>
+</div>
+  </div>
+
+        <div class="pt-2 md:pt-5 px-10 md:px-20 gap-10 md:gap-20 relative " id="projects">
             <div>
-      <h1 class="text-white text-center  text-3xl">       
-     FRENCH DESIGNER</h1>
-     <h1 class="text-white text-center  text-3xl"> AUDIO-VISUAL DIGITAL</h1>
-     <h1 class="text-white text-center  text-3xl"> PRODUCTS LOGOS </h1>
-    <div class="p-1 border-solid border-white w-full bg-white">
-      </div>
-      <br />
-        <h3 class=" text-white text-center pb-4 text-2xl font-bold ">WELCOME TO MY UNIVERSE</h3>
-    <p class="pb-4 text-lg  text-white text-center ">MOTION DESIGN</p>
-    <p class="pb-4 text-lg  text-white text-center ">3D Artist</p>
+      <h1 class="pt-8 md:pt-32 text-black text-left md:text-6xl text-xl font-rubik ">       
+    MY WORKS</h1>
+    <div class="md:pt-5 w-40 md:w-96">
+    <hr class="black">
     </div>
-<div class="h-80 ">
-<Planet />
-</div>
-</div>
-
-
-  <div class="p-2">
       </div>
+      <div class="grid-cols-1 md:flex text-sm md:text-3xl pt-8 md:pt-32 justify-center ">
+        
+      <div class="grid grid-cols-1 md:flex md:justify-center gap-3 md:gap-10 text-xs md:text-xl">
 
-    <div class="p-2">
-      </div>
-        <div class=" pt-5 px-5 gap-20 relative ">
-            <div>
-      <h1 class="text-white text-center  text-3xl">       
-    MY PROJECTS</h1>
-      <br />
-      </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-<cardFestival />
-<cardNasa />
-<cardDahut />
-<cardTiktak />
-<cardOsaka />
-<cardLogoB />
-
-</div>
-<button class="bg-white rounded-2xl font-book justify-center">Discover more</button>
-</div>
-
-      <section class="md:h-fit h-fit">
-          <h1 class=" text-white md:text-6xl text-xl  ">About Me</h1>
-        <br>
-         <div class="grid grid-cols-2 gap-6">
-          <div>
-          <p class="text-center text-white md:text-xl text-lg font-book ">I, I’m Eliot Feuvrier, i’m a french designer based in Montbéliard. I love discovering a lot of things and experimenting around graphic design, I am currently in the second year of BUT MMI </p>
-         </div>
-         <div>
-          <img src="/public/images/Eliot.png" class="md:w-60 w-32">         
-        </div>
-        </div> 
-     </section>
-      <section class="md:h-screen h-fit">
-        <div class="grid grid-cols-2">
-          <h1 class=" text-white md:text-6xl text-xl ">Contact</h1>
-          <img src="/public/logoEliotBlanc.svg" alt="" class="float-right">
-        </div>
-         <div class="grid grid-cols-2 gap-6">
-         <div class="col-span-2 md:text-9xl text-6xl text-white ">
-          LET’S WORK TOGETHER
-        </div>
-        </div> 
-     </section>
+        <div v-for="(button, index) in buttons" :key="index" class="flex-auto">
+      <button :class="{ 'selected': selectedButtonIndex === index }" class="text-black font-rubik" @click="changeImageAndText(index)" @mouseover="selectedButtonIndex = index" @mouseleave="selectedButtonIndex = null">
+        {{ button.text }}
+        <div class="animated-line" v-if="selectedButtonIndex === index"></div>
+      </button>
     </div>
   </div>
+   </div>
 </div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 px-20 md:px-56 pt-24">
+  <div>
+    <img class="w-96" :src="images[currentIndex]" alt="Current image">
+    </div>
+    <div>
+    <p class="text-black text-base md:text-xl font-rubik font-light pt-16 ">{{ texts[currentIndex] }}</p>
+    <div class="flex justify-center pt-10">
+    <button class="w-40 md:w-44 h-12 font-rubik font-light uppercase border bg-[#15112B] hover:border-[#15112B] text-white hover:text-black  hover:bg-white " @click="goToPage">Discover More </button>
+  </div>
+  </div>
+  </div>
+  <div class="grid grid-cols-2">
+    <div class="px-1 md:px-56 gap-6 pt-5 pb-8 md:pb-24 pl-20 md:pl-64 md:visible invisible">
+    <p class="text-black text-base md:text-xl font-rubik font-bold ">{{ dates[currentIndex] }}</p>
+    <div class="md:pt-5 w-40 md:w-96">
+    <hr class="black">
+    </div>
+</div>
+<div class="md:pt-1 md:pl-64 md:visible invisible">
+    <img src="/public/MiniPlanete.png" alt="">
+    </div>
+  </div>
+      <section class="bg-[#15112B] md:h-fit h-fit" id="about">
+        <div class="flex pt-10 md:pt-20 px-10 md:px-20 ">
+          <img src="/public/Etoile.png" alt="">
+          <div class="w-full px-5 md:px-10 pt-3">
+          <hr class="white">
+          </div>
+          <img src="/public/Etoile.png" alt="">
+        </div>
+        <div class="pt-5 px-10 md:px-20 gap-10 md:gap-20 relative ">
+        <div>
+      <h1 class="pt-10 md:pt-20 text-white text-left md:text-6xl text-xl font-rubik uppercase">       
+    About Me</h1>
+    <div class="md:pt-5 w-40 md:w-96">
+    <hr class="white">
+    </div>
+      </div>
+         <div class="mt-3 absolute right-40 md:visible invisible ">
+          <img src="/public/Assets1.png" alt="">
+         </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 px-7 md:px-56 pt-10 md:pt-24 gap-20 md:gap-40">
+        <div>
+    <p class="text-white text-base md:text-xl font-rubik font-light pt-12 md:pt-16">Hello, I’m Eliot Feuvrier, i’m a french designer based in Montbéliard. I like to discover a lot of things and experiment with graphic design. I am curently in second year of MMI goal</p>
+
+  </div>
+        <div>
+    <img class="w-80 md:w-96 pl-4 pr-4 md:pl-8" src="/public/Eliot.png" alt="Current image">
+    </div>
+  </div>
+  <div class="mt-3 absolute left-40 md:visible invisible">
+          <img src="/public/Assets2.png" alt="">
+         </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 px-7 md:px-56 pt-12 md:pt-24 gap-20 md:gap-40">
+  <div>
+    <img class="w-80 md:w-96 pt-10 pl-4 pr-4 md:pt-0 md:pl-8" src="/public/SkillsTree.png" alt="Skills tree">
+    </div>
+    <div>
+    <p class="text-base md:text-xl font-rubik font-light md:pt-16 text-white ">Here is a summary of my different skills on the software that I had the opportunity to experiment</p>
+    <div class="flex pt-10 justify-center">
+      <RouterLink to="/about">
+    <button class="w-40 md:w-44 h-12 font-rubik font-light uppercase border bg-[#15112B] hover:border-[#15112B] text-white hover:text-black  hover:bg-white " @click="goToPage">About me </button>
+  </RouterLink>
+  </div>
+  </div>
+  </div>
+  <div class="mt-3 absolute bottom-2 right-40 md:visible invisible">
+          <img src="/public/Assets3.png" alt="">
+         </div>
+        </div>
+        <div class="flex pt-10 pb-5 md:pb-20 px-10 md:px-20 ">
+          <img src="/public/Etoile.png" alt="">
+          <div class="w-full px-5 md:px-10 pt-3">
+          <hr class="white">
+          </div>
+          <img src="/public/Etoile.png" alt="">
+        </div>
+     </section>
+     <div id="contact">
 <Footer />
+</div>
+
 </template>
 
 <style>
+.animated-line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  animation-name: line-animation;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes line-animation {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+hr.black {
+  border-top: 2px solid black;
+}
+hr.white {
+  border-top: 2px solid white;
+}
+template {
+  overflow-x: hidden;
+}
+
+.container {
+  overflow: hidden;
+  display: flex;
+  /* Fonctionne avec toutes les tailles */
+
+  transform: translateY(-20%);
+  /* pour rotate on enlève le translate et on rajoute le rotate */
+  /* transform:  rotate(90deg); */
+}
+.txt {
+  white-space: nowrap;
+  font-size: 50px;
+  animation: scrollTxt 7s linear infinite;
+}
+
+
+@keyframes scrollTxt {
+  0%{
+    transform: translate(-60%, 0);
+  }
+  100% {
+    transform: translate(0%, 0);
+  }
+}
 #stars {
     width: 1px;
     height: 1px;
@@ -287,6 +452,7 @@ export default {
     659px 1860px #fff, 388px 1412px #fff, 1212px 458px #fff, 755px 1468px #fff,
     696px 1654px #fff, 1144px 60px #fff;
 }
+
 #stars:after {
     content: '';
     position: absolute;
@@ -472,6 +638,7 @@ export default {
     659px 1860px #fff, 388px 1412px #fff, 1212px 458px #fff, 755px 1468px #fff,
     696px 1654px #fff, 1144px 60px #fff;
 }
+
 #stars2 {
     width: 2px;
     height: 2px;
@@ -529,6 +696,7 @@ export default {
     156px 81px #fff, 1915px 502px #fff, 1076px 1846px #fff, 152px 1669px #fff,
     986px 1529px #fff, 1667px 1137px #fff;
 }
+
 #stars2:after {
     content: '';
     position: absolute;
@@ -588,6 +756,7 @@ export default {
     156px 81px #fff, 1915px 502px #fff, 1076px 1846px #fff, 152px 1669px #fff,
     986px 1529px #fff, 1667px 1137px #fff;
 }
+
 #stars3 {
     width: 3px;
     height: 3px;
@@ -620,6 +789,7 @@ export default {
     494px 1957px #fff, 1296px 431px #fff, 175px 1507px #fff, 831px 121px #fff,
     498px 1947px #fff, 617px 880px #fff, 240px 403px #fff;
 }
+
 #stars3:after {
     content: '';
     position: absolute;
@@ -654,6 +824,8 @@ export default {
     494px 1957px #fff, 1296px 431px #fff, 175px 1507px #fff, 831px 121px #fff,
     498px 1947px #fff, 617px 880px #fff, 240px 403px #fff;
 }
+
+
 @keyframes animStar {
     from {
         transform: translateY(0px);
@@ -662,4 +834,5 @@ export default {
         transform: translateY(-2000px);
     }
 }
+
 </style>
