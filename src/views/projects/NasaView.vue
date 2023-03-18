@@ -38,7 +38,7 @@
       </div>
       <div class="pb-10 md:pb-20">
   
-      <img class="w-48 md:w-80" src="/public/Nasa_couleurs.png">
+      <img class="w-48 md:w-80" src="/public/nasa_couleurs.png">
       <p class="text-black pl-28 md:pl-64 pt-1 text-base font-rubik">Logo</p>
   </div>
       </div>
