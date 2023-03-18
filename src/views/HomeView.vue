@@ -22,10 +22,10 @@ export default {
       email_id: "",
       message: "",
       images: [
-        '/public/festival.png',
+        '/assets/Festival-0c7c4312.png',
         '/assets/Nasa_couleurs-6c971a85.png',
         '/assets/Dahut-d2019abd.png',
-        '/public/TikTak.png',
+        '/assets/TikTakScreen-5f00cc92.png',
         '/assets/Osaka-34219aee.png',
         '/assets/Cassandre_affiche-f5bfe07e.png'
       ],
