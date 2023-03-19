@@ -31,7 +31,7 @@ export default {
 <div class="pt-2 md:pt-5 px-10 md:px-20 gap-10 md:gap-20 pb-5 md:pb-10 relative ">
             <div>
       <h1 class="pt-8 md:pt-24 uppercase text-white text-left md:text-xl text-base font-rubik font-bold ">       
-        1. Informations sur le propriétaire du site :
+        1. SITE OWNER INFORMATION :
 </h1>
 
     <p class="text-sm md:text-base font-rubik font-light pt-5 md:pt-10 text-white">
@@ -48,7 +48,7 @@ feuvriereliot25@gmail.com</p>
       </div>
       <div>
       <h1 class="pt-8 md:pt-24 uppercase text-white text-left md:text-xl text-base font-rubik font-bold ">       
-      2. Hébergeur du site :
+        2. SITE HOST :
 </h1>
 
     <p class="text-sm md:text-base font-rubik font-light pt-5 md:pt-10 text-white">
@@ -62,37 +62,37 @@ feuvriereliot25@gmail.com</p>
 </p>
       </div>
       <div>
-      <h1 class="pt-8 md:pt-24 uppercase text-white text-left md:text-xl text-base font-rubik font-bold ">       
-        3. Propriété intellectuelle
+      <h1 class="pt-8 md:pt-24 uppercase text-white text-left md:text-xl text-base font-rubik font-bold ">            
+3. INTELLECTUAL PROPERTY
 </h1>
 
     <p class="text-sm md:text-base font-rubik font-light pt-5 md:pt-10 text-white">
-      Tous les éléments du site (textes, images, vidéos, etc.) sont la propriété exclusive d'Eliot Feuvrier et sont protégés par les lois relatives à la propriété intellectuelle. Toute reproduction, diffusion, ou exploitation non autorisée de ces éléments est strictement interdite.
+      All elements of the site (texts, images, videos, etc.) are the exclusive property of Eliot Feuvrier and are protected by intellectual property laws. Any reproduction, distribution, or unauthorized exploitation of these elements is strictly prohibited.
 </p>
       </div>
       <div>
       <h1 class="pt-8 md:pt-24 uppercase text-white text-left md:text-xl text-base font-rubik font-bold ">       
-        4. Utilisation des données personnelles :
+        4. USE OF PERSONAL DATA:
 </h1>
 
     <p class="text-sm md:text-base font-rubik font-light pt-5 md:pt-10 text-white">
-      Les informations personnelles recueillies sur ce site sont utilisées uniquement dans le cadre de la gestion de votre compte et de vos échanges avec Eliot Feuvrier. Elles ne sont en aucun cas transmises à des tiers. Conformément à la loi Informatique et Libertés du 6 janvier 1978, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant.</p>
+      The personal information collected on this site is used solely for the management of your account and your exchanges with Eliot Feuvrier. They are in no way transmitted to third parties. In accordance with the Data Protection Act of January 6, 1978, you have the right to access, rectify and delete data concerning you.</p>
       </div>
       <div>
       <h1 class="pt-8 md:pt-24 uppercase text-white text-left md:text-xl text-base font-rubik font-bold ">       
-        5. Responsabilité :
+        5. RESPONSABILITY :
 </h1>
 
     <p class="text-sm md:text-base font-rubik font-light pt-5 md:pt-10 text-white">
-      Eliot Feuvrier décline toute responsabilité en cas d'interruption ou d'indisponibilité du site, de survenance de bugs ou d'erreurs. L'utilisateur est seul responsable de l'utilisation qu'il fait du site et des informations qui y sont contenues.    </p>
+      Eliot Feuvrier declines all responsibility in the event of interruption or unavailability of the site, occurrence of bugs or errors. The user is solely responsible for the use he makes of the site and the information contained therein.   </p>
       </div>
       <div>
       <h1 class="pt-8 md:pt-24 uppercase text-white text-left md:text-xl text-base font-rubik font-bold ">       
-        6. Liens hypertextes :
+        6. HYPERTEXT LINKS:
 </h1>
 
     <p class="text-sm md:text-base font-rubik font-light pt-5 md:pt-10 pb-10 md:pb-40 text-white">
-      Les liens hypertextes présents sur le site peuvent renvoyer vers d'autres sites web. Eliot Feuvrier ne saurait être tenu responsable du contenu de ces sites ni des éventuels préjudices qu'ils pourraient causer. Il est important de noter que ces mentions légales ne sont qu'un exemple et qu'il est recommandé de consulter un avocat pour s'assurer de leur pertinence et de leur conformité avec les lois en vigueur dans votre pays.
+      The hypertext links present on the site may refer to other websites.Eliot Feuvrier cannot be held responsible for the content of these sites or any damage they may cause. It is important to note that this legal notice is only an example and it is recommended to consult a lawyer to ensure its relevance and compliance with the laws in force in your country.
     </p>
     </div>
 
