@@ -32,7 +32,7 @@
   <div class="grid grid-cols-1 md:grid-cols-2 pt-12 md:pt-24 pl-16 md:pl-80">
       <div>
         <div class="pb-10 md:pb-20">
-      <img class="w-48 md:w-80 " src="/public/tiktakLogo.png">
+      <img class="w-48 md:w-80 " src="/public/tiktak.svg">
       <p class="text-black pl-36 md:pl-64 pt-1 text-base font-rubik">Logo</p>
       </div>
       <div class="pb-10 md:pb-20">

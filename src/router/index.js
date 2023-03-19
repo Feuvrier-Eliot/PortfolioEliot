@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/ContactView.vue';
 import AboutView from '../views/AboutView.vue';
-import View404 from '../views/View404.vue';
 import LegalNoticeView from '../views/LegalNoticesView.vue'
 import FestivalView from '../views/projects/FestivalView.vue';
 import NasaView from '../views/projects/NasaView.vue';
@@ -29,7 +28,6 @@ const router = createRouter({
     { path: '/cassandre', name: 'CassandreView', component: CassandreView },
 
 
-    { path: '/:pathMatch(.*)*', name: 'View404', component: View404 },
 
 
 
